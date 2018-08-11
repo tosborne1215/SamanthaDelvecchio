@@ -16,6 +16,11 @@ services:
         networks:
             - web
             - default
+        environment:
+            - FLASK_APP=main.py
+            - FLASK_DEBUG=1
+        volumes:
+            - "./webapp/app:/app"
         labels:
             - "traefik.backend=staging.samantha.delvecchio.training"
             - "traefik.docker.network=web"
