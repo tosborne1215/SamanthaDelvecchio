@@ -8,17 +8,18 @@
 		<title>{% block title %}Samantha Del Vecchio{% endblock %}</title>
 		<meta name="description" content="{% block description %}Samantha Del Vecchio{% endblock %}">
 		
-		<link rel="apple-touch-icon" sizes="180x180" href="{{ url_for('static', filename='apple-touch-icon.png') }}">
-		<link rel="icon" type="image/png" sizes="32x32" href="{{ url_for('static', filename='favicon-32x32.png') }}">
-		<link rel="icon" type="image/png" sizes="16x16" href="{{ url_for('static', filename='favicon-16x16.png') }}">
-		<link rel="manifest" href="{{ url_for('static', filename='site.webmanifest') }}">
-		<link rel="mask-icon" href="{{ url_for('static', filename='safari-pinned-tab.svg') }}" color="#5bbad5">
-		<meta name="msapplication-TileColor" content="#2d89ef">
-		<meta name="theme-color" content="#ffffff">
-
-		<!-- MS Stuff -->
-		<meta name="msapplication-config" content="{{ url_for('static', filename='browserconfig.xml') }}">
-		<meta name="application-name" content="Samantha Del Vecchio"/>
+		{% block favicon %}
+			<link rel="apple-touch-icon" sizes="120x120" href="{{ url_for('static', filename='apple-touch-icon.png') }}">
+			<link rel="icon" type="image/png" sizes="32x32" href="{{ url_for('static', filename='favicon-32x32.png') }}">
+			<link rel="icon" type="image/png" sizes="16x16" href="{{ url_for('static', filename='favicon-16x16.png') }}">
+			<link rel="manifest" href="{{ url_for('static', filename='site.webmanifest') }}">
+			<link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+			<meta name="apple-mobile-web-app-title" content="Samantha Del Vecchio">
+			<meta name="application-name" content="Samantha Del Vecchio">
+			<meta name="msapplication-TileColor" content="#00aba9">
+			<meta name="msapplication-config" content="{{ url_for('static', filename='browserconfig.xml') }}">
+			<meta name="theme-color" content="#ffffff">
+		{% endblock %}
 
 		{% block canonical_url %}
 		<link rel="canonical" href="">
@@ -71,7 +72,7 @@
 		var goto_next_page = function(forwardFlow = true) {
 			var current = $('.page.active');
 			var next = (forwardFlow ? $(current).next() : $(current).prev());
-			
+
 			if (next.length != 0) {
 				current.removeClass('active');
 				next.addClass('active');
