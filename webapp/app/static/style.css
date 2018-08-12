@@ -1,0 +1,70 @@
+html, body {
+	height: 100%;
+}
+body {
+	background: linear-gradient(to bottom right, #fcb69f, #ffecd2);
+	color: #420039;
+	overflow: hidden;
+}
+#page-container {
+}
+
+a:active,
+a:hover,
+a:link,
+a:visited {
+	color: #932f6d;
+}
+
+.brand {
+	font-weight: bold;
+}
+
+.page {
+	height: 100%;
+	width: 100%;
+	display: none;
+}
+
+.page.active {
+	display: initial;
+}
+
+.page h1 {
+	font-size: 4em;
+}
+
+div.page div.left {
+	z-index: 1;
+}
+
+div.page div.right {
+	z-index: -1;
+	position: relative;
+	top: -25%;
+	left: 55%;
+}
+
+.left {
+	animation-name: left;
+    animation-duration: 1s;
+    width: 75%;
+}
+
+.right {
+	animation-name: bottom;
+	animation-duration: .90s;
+}
+
+.navbar-toggler {
+	position: absolute;
+	top: -25px;
+	right: 0px;
+}
+
+.navbar {
+	float: right;
+	position:relative;
+	top: 30px;
+	min-width: 10em;
+}
