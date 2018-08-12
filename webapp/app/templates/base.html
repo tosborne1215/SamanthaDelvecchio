@@ -71,9 +71,7 @@
 		var goto_next_page = function(forwardFlow = true) {
 			var current = $('.page.active');
 			var next = (forwardFlow ? $(current).next() : $(current).prev());
-			if (next.length == 0) {
-				next = (forwardFlow ? $(current).prev() : $(current).next());
-			}
+			
 			if (next.length != 0) {
 				current.removeClass('active');
 				next.addClass('active');
