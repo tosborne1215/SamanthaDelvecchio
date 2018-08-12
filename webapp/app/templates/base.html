@@ -63,7 +63,54 @@
 			<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 		{% endblock %}
 
+		{% block hammerjs %}
+			<script src="{{ url_for('static', filename='hammer.js') }}"></script>
+		{% endblock %}
+
 		<script>
+		var goto_next_page = function(forwardFlow = true) {
+			var current = $('.page.active');
+			var next = (forwardFlow ? $(current).next() : $(current).prev());
+			if (next.length == 0) {
+				next = (forwardFlow ? $(current).prev() : $(current).next());
+			}
+			if (next.length != 0) {
+				current.removeClass('active');
+				next.addClass('active');
+			}
+		};
+
+		var goto_prev_page = function() {
+			goto_next_page(false);
+		};
+
+		var hammertime = new Hammer(document);
+		hammertime.get('swipe').set({ direction: Hammer.DIRECTION_VERTICAL });
+		
+		hammertime.on('swipeup', function(ev) {
+			//Next
+			goto_next_page();
+		});
+		hammertime.on('swipedown', function(ev) {
+			//Prev
+			goto_prev_page();
+		});
+
+		$(function() {
+
+			
+			$(document).keyup(function (event){
+				if (event.which == 40) {
+					//Next
+					goto_next_page();
+				}
+				if (event.which == 38) {
+					//Prev
+					goto_prev_page();
+				}
+			});
+			
+		});
 		</script>
 	</head>
 
