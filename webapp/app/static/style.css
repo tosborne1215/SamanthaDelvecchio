@@ -4,7 +4,6 @@ html, body {
 body {
 	background: linear-gradient(to bottom right, #fcb69f, #ffecd2);
 	color: #420039;
-	overflow: hidden;
 }
 #page-container {
 }
@@ -23,11 +22,6 @@ a:visited {
 .page {
 	height: 100%;
 	width: 100%;
-	display: none;
-}
-
-.page.active {
-	display: initial;
 }
 
 .page h1 {
