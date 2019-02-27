@@ -17,6 +17,7 @@ First, you need to be using git. You can find all kinds of free tools that will 
 3. Make Changes like adding files or changing text.
 4. This is like saving `git commit -am "A description of changes."`
 5. This sends the change to github. `git push origin <smallnameofchanges>`
+6. Go here and create a Pull Request. Select the name <smallnameofchanges>
 
 # Where is the content?
 Pretty much just look at /webapp/app/templates/index.html
