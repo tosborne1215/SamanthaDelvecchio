@@ -10,7 +10,7 @@ Steps:
 2. run `docker-compose -f docker-compose.local.yml up`
 3. Open this in a browser http://localhost:8080/
 
-# How do I make small content changesl.
+# How do I make small content changes?.
 First, you need to be using git. You can find all kinds of free tools that will help with git or run the command line too
 1. The name doesnt matter but you need to use the same name in the subsequent commands `git branch <smallnameofchanges>`
 2. `git checkout <smallnameofchanges>`
