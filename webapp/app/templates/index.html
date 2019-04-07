@@ -14,6 +14,18 @@
     <script type="text/javascript" src="https://platform.linkedin.com/badges/js/profile.js" async defer></script>
 {% endblock %}
 
+{% block additional_menus %}
+    <li class="nav-item">
+        <a class="nav-link" href="{{ url_for("index") }}#contact">Contact</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="{{ url_for("index") }}#about">About</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="{{ url_for("index") }}#portfolio">Portfolio</a>
+    </li>
+{% endblock %}
+
 {% block body %}
 <div id="title-page" class="active">
 	<h1>Samantha <span class="text-nowrap">Del Vecchio</span></h1>
