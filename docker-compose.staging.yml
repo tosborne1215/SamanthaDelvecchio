@@ -17,9 +17,9 @@ services:
             - web
             - default
         labels:
-            - "traefik.backend=staging.samantha.delvecchio.training"
+            - "traefik.backend=testing.samantha.delvecchio.training"
             - "traefik.docker.network=web"
-            - "traefik.frontend.rule=Host:staging.samantha.delvecchio.training"
+            - "traefik.frontend.rule=Host:testing.samantha.delvecchio.training"
             - "traefik.enable=true"
             - "traefik.port=80"
 
