@@ -7,30 +7,55 @@
 {% endblock %}
 
 {% block page_css %}
+
 {% endblock %}
 
 {% block page_js %}
+    <script type="text/javascript" src="https://platform.linkedin.com/badges/js/profile.js" async defer></script>
 {% endblock %}
 
 {% block body %}
-<div class="page active">
+<div id="title-page" class="active">
 	<h1>Samantha <span class="text-nowrap">Del Vecchio</span></h1>
-	<h2><i>e-Learning Instructional Designer</i></h2>
-	 <img src="{{ url_for('static', filename='WebsiteHomeImage.png') }}">
-	 <h5><p><br>Welcome to my portfolio home page.</br><br> My career as an e-Learning Designer helped me learn and grow not only as an instructional designer, but as a person. I was recognized by my Director as an exemplary team member for showing initiative in taking on more challenges and mentoring other team members on Instructional Systems Design (ISD) principles.</br><br> This website allows you to get to know me and my instructional design skills better. Here you will find more about me, my resume and a sample of my instructional design work. If you have questions or comments you would like to provide, please click the Contact Me link.</br></p></h5>
+	<h2 class="font-italic">e-Learning Instructional Designer</h2>
+	 <img class="center" src="{{ url_for('static', filename='WebsiteHomeImage.png') }}">
 </div>
-<div class="page">
-	<h1>About</h1>
-	<h5><p><br>Hello! My name is Samantha Del Vecchio and I currently live in Spokane Washington. Most of my life was spent in the Midwest, but was lucky enough to visit Germany for 2 years in the early 1990’s. </br><br>My technical skills are self-taught; including my skill to build my own PC’s, repairing computers for friends and family, editing images, and creating e-learning. </br><br>I’m highly skilled and experienced in e-Learning Instructional Design with over 10 years of computer-based training development utilizing the ADDIE model, with a focus of developing and designing e-learning for Software and Web Development employees. </br><br>I’m Technologically-savvy and proficient in multiple training development applications and learning management systems (LMS) to include; Microsoft Office suite, Captivate (all versions), Camtasia, SnagIt, CrazyTalk, Dreamweaver, PeopleSoft, SAP SuccessFactors LMS, Oracle Cloud LMS, Atlassian software development tools, Adobe Connect, and Cisco WebEx. </br><br>Throughout my career, I have mentored many team members on how to create e-learning in Captivate, to industry standards for developing e-learning content. I also created the PowerPoint and Captivate templates for the Global Learning & Development team to be used in all training development. </br><br>In 2015 it was determined our employees had a need for some basic programming courses. In response to the need, in a month I gained a basic knowledge of PHP, HTML, Voice XML, and a proprietary language created by my employer, to me assist in the development of the courses. </br><br>In 2016 I gained the approval of the President of my Business Unit, the Vice President of my department and my Director to be converted into a remote employee. </br><br>In 2018 I worked as a core member of our new Learning Management System (LMS) implementation team. Beyond my duties as a core member, I was responsible for republishing over 400 content items into SCORM 2004 and uploading the content and building the courses in the new system. I worked closely with the LMS contractor to find a solution to how we could control access to specific courses and train the other core members on the solution. I also created a demo video to assist other members of the Learning & Development team on how to publish their own courses in Captivate and Camtasia to limit rework.</br></p></h5>
-</div>
-<div class="page">
-	<h1>Portfolio</h1>
-	<h5><p>The link below allows you to see an example of an Instructional Design project I created using Captivate 9, Camtasia Studio 8, and SnagIt 11.</br><br><a href="{{ url_for('static', filename='Training Example/index.html') }}" target="_blank">Training Example</a></br></p></h5>
 
-</div>
 <div class="page">
-	<h1>Contact</h1>
-	<h5><p>Thank you for taking time to observe my portfolio. Feel free to contact me if you have any questions, comments, or would like to chat further about any e-learning development needs you may have.</p></h5>
+    <h3 class="mx-auto">Welcome to my portfolio home page.</h3>
+    <p>My career as an e-Learning Designer helped me learn and grow not only as an instructional designer, but as a person. I was recognized by my Director as an exemplary team member for showing initiative in taking on more challenges and mentoring other team members on Instructional Systems Design (ISD) principles. This website allows you to get to know me and my instructional design skills better. Here you will find more about me, my resume and a sample of my instructional design work. <a href="#contact">Contact me</a> if you have questions or comments you would like to provide.</p>
+</div>
+
+<div class="page">
+    <h1><a id="about">About</a></h1>
+	<p>Hello! My name is Samantha Del Vecchio and I currently live in Spokane Washington. Most of my life was spent in the Midwest, but was lucky enough to visit Germany for 2 years in the early 1990’s. My technical skills are self-taught; including my skill to build my own PC’s, repairing computers for friends and family, editing images, and creating e-learning.</p>
+    <p class="reduced-bot-margin">I’m highly skilled and experienced in e-Learning Instructional Design with over 10 years of computer-based training development utilizing the ADDIE model, with a focus of developing and designing e-learning for Software and Web Development employees. I’m Technologically-savvy and proficient in multiple training development applications and learning management systems (LMS) to include;</p>
+        <ul class="skill-list">
+            <li>Microsoft Office suite</li>
+            <li>Captivate</li>
+            <li>Camtasia</li>
+            <li>SnagIt</li>
+            <li>CrazyTalk</li>
+            <li>Dreamweaver</li>
+            <li>PeopleSoft</li>
+            <li>SAP SuccessFactors LMS</li>
+            <li>Oracle Cloud LMS</li>
+            <li>Atlassian software development tools</li>
+            <li>Adobe Connect</li>
+            <li>Cisco WebEx</li>
+        </ul>
+    <p>Throughout my career, I have mentored many team members on how to create e-learning in Captivate, to industry standards for developing e-learning content. I also created the PowerPoint and Captivate templates for the Global Learning & Development team to be used in all training development. In 2015 it was determined our employees had a need for some basic programming courses. In response to the need, in a month I gained a basic knowledge of PHP, HTML, Voice XML, and a proprietary language created by my employer, to assist in the development of the courses.</p>
+    <p>In 2016 I converted into a remote employee and made the move to Spokane, WA where I currently reside. My President, Vice President, and my Director all approved of my decision to convert. In 2018 I worked as a core member of our new Learning Management System (LMS) implementation team. Beyond my duties as a core member, I was responsible for republishing over 400 content items into SCORM 2004 and uploading the content and building the courses in the new system. I worked closely with the LMS contractor to find a solution to how we could control access to specific courses and train the other core members on the solution. I also created a demo video to assist other members of the Learning & Development team on how to publish their own courses in Captivate and Camtasia to limit rework.</p>
+</div>
+
+<div class="page">
+    <h1><a id="portfolio">Portfolio</a></h1>
+	<p>The link below allows you to see an example of an Instructional Design project I created using Captivate 9, Camtasia Studio 8, and SnagIt 11.<a href="{{ url_for('static', filename='Training Example/index.html') }}" target="_blank">Training Example</a></p>
+</div>
+
+<div class="page">
+	<h1><a id="contact">Contact</a></h1>
+	<p>Thank you for taking time to observe my portfolio. Feel free to contact me if you have any questions, comments, or would like to chat further about any e-learning development needs you may have.</p>
 	<div class="LI-profile-badge"  data-version="v1" data-size="medium" data-locale="en_US" data-type="vertical" data-theme="dark" data-vanity="samantha-del-vecchio-926b941a"><a class="LI-simple-link" href='https://www.linkedin.com/in/samantha-del-vecchio-926b941a?trk=profile-badge'>LinkedIn</a></div>
 </div>
 {% endblock %}
